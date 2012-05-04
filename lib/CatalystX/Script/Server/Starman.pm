@@ -5,7 +5,7 @@ use Pod::Usage;
 use Pod::Find qw(pod_where);
 use namespace::autoclean;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 extends 'Catalyst::Script::Server';
 
@@ -107,8 +107,11 @@ added by hacking your server script.
 
 =head1 Adding this to your application
 
-Just write a server script in your application which inherits from this
+Just add a server script module to your application which inherits from this
 package.
+
+L<Catalyst::ScriptRunner> will automatically detect and use it when
+script/myapp_server.pl is started.
 
 For example:
 
@@ -128,7 +131,7 @@ L<Catalyst::PSGI>
 
 =head1 AUTHOR
 
-Tomas Doran (t0m) C<< <bobtfish@bobtfish.net >>
+Tomas Doran (t0m) C<< <bobtfish@bobtfish.net> >>
 
 =head1 COPYRIGHT & LICENSE
 

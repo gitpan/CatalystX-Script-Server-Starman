@@ -1,6 +1,6 @@
 use strict;
 use warnings;
-use inc::Module::Install 0.91;
+use inc::Module::Install 1.06;
 use Module::Install::AuthorRequires;
 use Module::Install::AuthorTests;
 
@@ -21,7 +21,7 @@ author_requires 'Test::Pod' => '1.14';
 
 author_tests 't/author';
 
-resources repository => 'git://somewhere.com/myproject.git';
+resources repository => 'git://git.shadowcat.co.uk/catagits/CatalystX-Script-Server-Starman.git';
 
 if ($Module::Install::AUTHOR) {
     system("pod2text lib/CatalystX/Script/Server/Starman.pm > README")
